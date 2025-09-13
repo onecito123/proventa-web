@@ -66,32 +66,32 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 shadow-card bg-card">
+            <Card key={index} className="group hover:shadow-glow hover:-translate-y-2 transition-all duration-500 border-0 shadow-card bg-card hover:bg-primary/5 cursor-pointer">
               <CardHeader className="pb-4">
                 <div className="relative mb-4 h-48 rounded-lg overflow-hidden">
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-primary opacity-80"></div>
-                  <div className="absolute inset-0 flex items-center justify-center text-white">
+                  <div className="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-all duration-300"></div>
+                  <div className="absolute inset-0 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
                 </div>
-                <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-smooth">
+                <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-all duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-muted-foreground mb-6 leading-relaxed">
+                <CardDescription className="text-muted-foreground mb-6 leading-relaxed group-hover:text-foreground transition-colors duration-300">
                   {service.description}
                 </CardDescription>
                 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                      <div className="w-2 h-2 bg-primary rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
                       {feature}
                     </li>
                   ))}
@@ -99,7 +99,7 @@ const Services = () => {
 
                 <Button 
                   variant="outline" 
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300 hover:shadow-lg"
                 >
                   Más Información
                 </Button>

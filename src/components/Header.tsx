@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,18 +21,18 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-foreground hover:text-primary transition-smooth">
+            <Link to="inicio" smooth={true} duration={500} className="text-foreground hover:text-primary transition-smooth cursor-pointer">
               Inicio
-            </a>
-            <a href="#servicios" className="text-foreground hover:text-primary transition-smooth">
+            </Link>
+            <Link to="servicios" smooth={true} duration={500} className="text-foreground hover:text-primary transition-smooth cursor-pointer">
               Servicios
-            </a>
-            <a href="#nosotros" className="text-foreground hover:text-primary transition-smooth">
+            </Link>
+            <Link to="nosotros" smooth={true} duration={500} className="text-foreground hover:text-primary transition-smooth cursor-pointer">
               Nosotros
-            </a>
-            <a href="#contacto" className="text-foreground hover:text-primary transition-smooth">
+            </Link>
+            <Link to="contacto" smooth={true} duration={500} className="text-foreground hover:text-primary transition-smooth cursor-pointer">
               Contacto
-            </a>
+            </Link>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -56,18 +57,18 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
             <nav className="flex flex-col space-y-4">
-              <a href="#inicio" className="text-foreground hover:text-primary transition-smooth px-4 py-2">
+              <Link to="inicio" smooth={true} duration={500} className="text-foreground hover:text-primary transition-smooth px-4 py-2 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 Inicio
-              </a>
-              <a href="#servicios" className="text-foreground hover:text-primary transition-smooth px-4 py-2">
+              </Link>
+              <Link to="servicios" smooth={true} duration={500} className="text-foreground hover:text-primary transition-smooth px-4 py-2 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 Servicios
-              </a>
-              <a href="#nosotros" className="text-foreground hover:text-primary transition-smooth px-4 py-2">
+              </Link>
+              <Link to="nosotros" smooth={true} duration={500} className="text-foreground hover:text-primary transition-smooth px-4 py-2 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 Nosotros
-              </a>
-              <a href="#contacto" className="text-foreground hover:text-primary transition-smooth px-4 py-2">
+              </Link>
+              <Link to="contacto" smooth={true} duration={500} className="text-foreground hover:text-primary transition-smooth px-4 py-2 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 Contacto
-              </a>
+              </Link>
               <div className="flex flex-col space-y-2 px-4 pt-4">
                 <Button variant="ghost" className="text-foreground hover:text-primary justify-start">
                   Iniciar Sesión
