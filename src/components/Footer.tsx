@@ -1,5 +1,13 @@
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Phone, Mail, Clock, Linkedin, Twitter, Facebook } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Linkedin,
+  Twitter,
+  Facebook,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -15,17 +23,27 @@ const Footer = () => {
               <span className="text-xl font-bold">Proventa</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Soluciones tecnológicas confiables para impulsar el crecimiento de tu empresa. 
-              Más de 10 años de experiencia en soporte técnico e infraestructura TI.
+              Somos tu aliado Tecnologico en Magallanes. Más de 20 años de
+              experiencia dando soporte técnico e informático las empresas de
+              Punta Arenas.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-smooth">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-primary transition-smooth"
+              >
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-smooth">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-primary transition-smooth"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-smooth">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-primary transition-smooth"
+              >
                 <Facebook size={20} />
               </a>
             </div>
@@ -35,25 +53,46 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold mb-6">Servicios</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Soporte Técnico 24/7</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Infraestructura de Red</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Ciberseguridad</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Migración a la Nube</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Mantenimiento Preventivo</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Consultoría TI</a></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold mb-6">Empresa</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Acerca de Nosotros</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Nuestro Equipo</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Casos de Éxito</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Blog</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Carreras</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-smooth">Contacto</a></li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-primary transition-smooth"
+                >
+                  Soporte Técnico Lunes a Viernes
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-primary transition-smooth"
+                >
+                  Soporte y Mantenimiento
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-primary transition-smooth"
+                >
+                  Limpieza de equipos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-primary transition-smooth"
+                >
+                  Asistencia y Consultoría
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-primary transition-smooth"
+                >
+                  Mantenimiento Preventivo
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -64,26 +103,26 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="text-primary mt-1 flex-shrink-0" size={20} />
                 <div className="text-gray-300">
-                  <div>Av. Tecnología 123</div>
-                  <div>Ciudad Empresarial, CP 12345</div>
+                  <div>Av. Santos Mardones #272 </div>
+                  <div>Punta Arenas, Chile</div>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Phone className="text-primary flex-shrink-0" size={20} />
-                <div className="text-gray-300">+1 (555) 123-4567</div>
+                <div className="text-gray-300">+569 97267744</div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Mail className="text-primary flex-shrink-0" size={20} />
-                <div className="text-gray-300">contacto@proventa.com</div>
+                <div className="text-gray-300">comercial@proventa.net</div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <Clock className="text-primary mt-1 flex-shrink-0" size={20} />
                 <div className="text-gray-300">
-                  <div>Lun - Vie: 8:00 AM - 6:00 PM</div>
-                  <div>Soporte 24/7 disponible</div>
+                  <div>Lun - Vie: 9:00 AM - 7:00 PM</div>
+                  <div>Soporte 8/5 disponible</div>
                 </div>
               </div>
             </div>
@@ -97,9 +136,15 @@ const Footer = () => {
             © 2024 Proventa. Todos los derechos reservados.
           </div>
           <div className="flex space-x-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-primary transition-smooth">Política de Privacidad</a>
-            <a href="#" className="hover:text-primary transition-smooth">Términos de Servicio</a>
-            <a href="#" className="hover:text-primary transition-smooth">Cookies</a>
+            <a href="#" className="hover:text-primary transition-smooth">
+              Política de Privacidad
+            </a>
+            <a href="#" className="hover:text-primary transition-smooth">
+              Términos de Servicio
+            </a>
+            <a href="#" className="hover:text-primary transition-smooth">
+              Cookies
+            </a>
           </div>
         </div>
       </div>

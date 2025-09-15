@@ -1,54 +1,95 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Monitor, Network, Shield, Cloud, Wrench, Headphones } from "lucide-react";
-import supportImage from "@/assets/service-support.jpg";
-import networkImage from "@/assets/service-network.jpg";
-import securityImage from "@/assets/service-security.jpg";
+import {
+  Monitor,
+  Network,
+  Shield,
+  Cloud,
+  Wrench,
+  Headphones,
+} from "lucide-react";
+import supportImage from "@/assets/tecnico-3.jpg";
+import networkImage from "@/assets/tecnico-2.jpg";
+import securityImage from "@/assets/tecnico.jpg";
 
 const Services = () => {
   const services = [
     {
       icon: <Headphones className="w-8 h-8" />,
-      title: "Soporte Técnico 24/7",
-      description: "Asistencia técnica inmediata para resolver cualquier problema informático que pueda afectar tu productividad.",
+      title: "Soporte Técnico 8/5",
+      description:
+        "Asistencia técnica de lunes a viernes remoto y presencial para resolver cualquier problema informático que pueda afectar tu productividad.",
       image: supportImage,
-      features: ["Respuesta inmediata", "Soporte remoto", "Técnicos certificados"]
+      features: [
+        "Respuesta inmediata",
+        "Soporte remoto",
+        "Técnicos certificados",
+      ],
     },
     {
       icon: <Network className="w-8 h-8" />,
-      title: "Infraestructura de Red",
-      description: "Diseño, implementación y mantenimiento de redes corporativas robustas y escalables.",
+      title: "Soporte y Mantenimiento",
+      description:
+        "Soporte, Optimizacion y mantenimiento de equipos y Software atendiendo fallas y problemas",
       image: networkImage,
-      features: ["Redes escalables", "Alta disponibilidad", "Monitoreo continuo"]
+      features: [
+        "Optimizacion de rendimiento, velocidad de arranque",
+        "Soporte preventivo y correctivo",
+        "Atencion a requerimientos de drivers o mal funcionamiento de Hardware",
+      ],
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Ciberseguridad",
-      description: "Protección integral contra amenazas digitales con las mejores prácticas de seguridad informática.",
+      title: "Limpieza de Equipos",
+      description:
+        "Limpieza de equipos cada 30 dias, eliminacion de virus, malware, etc.",
       image: securityImage,
-      features: ["Protección avanzada", "Auditorías de seguridad", "Backup automático"]
+      features: [
+        "Limpieza Fisica exhaustiva, polvo y suciedad en equipos",
+        "Limpieza lógica, eliminacion de archivos temporales y optimizacion de registroa",
+        "Actualizacion periodica y gestion de cuentas de usuario",
+      ],
     },
     {
       icon: <Cloud className="w-8 h-8" />,
-      title: "Migración a la Nube",
-      description: "Transición segura y eficiente de tus sistemas hacia infraestructuras cloud modernas.",
+      title: "Asistencia y Consultoría",
+      description:
+        "Mano de obra especializada para Asesoria, instalacion de software y hardware",
       image: supportImage,
-      features: ["Migración segura", "Optimización de costos", "Escalabilidad automática"]
+      features: [
+        "Instalacion de componentes",
+        "Orientacion y recomendaciones para implementacion de nuevas tecnologias",
+        "Apoyo en la seleccion y compra de equipos, componentes y productos electronicos",
+      ],
     },
     {
       icon: <Monitor className="w-8 h-8" />,
-      title: "Mantenimiento Preventivo",
-      description: "Mantenimiento proactivo de equipos y sistemas para prevenir fallas y optimizar rendimiento.",
-      image: networkImage,
-      features: ["Mantenimiento proactivo", "Diagnósticos avanzados", "Actualizaciones automáticas"]
+      title: "Servicios Adicionales",
+      description: "Respaldo de informacion y Soporte Digital para su empresa",
+      image: securityImage,
+      features: [
+        "Respaldo remoto mensual de informacion critica de los equipos para garantizar la seguridad de sus datos ante cualquier eventualidad",
+        "Asistencia tecnica completa para su sitio web, correos electronicos y presencia en linea",
+      ],
     },
     {
       icon: <Wrench className="w-8 h-8" />,
       title: "Consultoría TI",
-      description: "Asesoramiento estratégico para optimizar tu infraestructura tecnológica y procesos empresariales.",
+      description:
+        "Asesoramiento estratégico para optimizar tu infraestructura tecnológica y procesos empresariales.",
       image: securityImage,
-      features: ["Estrategia tecnológica", "Optimización de procesos", "ROI mejorado"]
-    }
+      features: [
+        "Estrategia tecnológica",
+        "Optimización de procesos",
+        "ROI mejorado",
+      ],
+    },
   ];
 
   return (
@@ -59,18 +100,21 @@ const Services = () => {
             Nuestros Servicios
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ofrecemos soluciones tecnológicas integrales diseñadas para impulsar 
+            Ofrecemos soluciones tecnológicas integrales diseñadas para impulsar
             el crecimiento y la eficiencia de tu empresa.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-glow hover:-translate-y-2 transition-all duration-500 border-0 shadow-card bg-card hover:bg-primary/5 cursor-pointer">
+            <Card
+              key={index}
+              className="group hover:shadow-glow hover:-translate-y-2 transition-all duration-500 border-0 shadow-card bg-card hover:bg-primary/5 cursor-pointer"
+            >
               <CardHeader className="pb-4">
                 <div className="relative mb-4 h-48 rounded-lg overflow-hidden">
-                  <img 
-                    src={service.image} 
+                  <img
+                    src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -87,34 +131,21 @@ const Services = () => {
                 <CardDescription className="text-muted-foreground mb-6 leading-relaxed group-hover:text-foreground transition-colors duration-300">
                   {service.description}
                 </CardDescription>
-                
+
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300"
+                    >
                       <div className="w-2 h-2 bg-primary rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
-
-                <Button 
-                  variant="outline" 
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300 hover:shadow-lg"
-                >
-                  Más Información
-                </Button>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-16">
-          <Button 
-            size="lg" 
-            className="bg-gradient-primary hover:shadow-glow transition-all duration-300 px-8 py-4 text-lg"
-          >
-            Ver Todos los Servicios
-          </Button>
         </div>
       </div>
     </section>
