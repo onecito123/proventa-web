@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail } from "lucide-react";
+import { Link } from "react-scroll";
 
 const CTA = () => {
   return (
@@ -17,21 +18,25 @@ const CTA = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button 
-            size="lg" 
-            className="bg-white text-primary hover:bg-blue-50 shadow-elegant hover:shadow-glow transition-all duration-300 text-lg px-8 py-4"
-          >
-            Consulta Gratuita
-            <ArrowRight className="ml-2" size={20} />
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline"
-            className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300 text-lg px-8 py-4"
-          >
-            Llamar Ahora
-            <Phone className="ml-2" size={20} />
-          </Button>
+          <Link to="contacto" smooth={true} duration={500}>
+            <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-blue-50 shadow-elegant hover:shadow-glow transition-all duration-300 text-lg px-8 py-4"
+            >
+              Consulta Gratuita
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
+          </Link>
+          <Link to="contacto" smooth={true} duration={500}>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300 text-lg px-8 py-4"
+            >
+              Llamar Ahora
+              <Phone className="ml-2" size={20} />
+            </Button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
